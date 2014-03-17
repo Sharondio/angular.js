@@ -34,6 +34,7 @@ Let's start with input fields for quantity and cost whose values are multiplied 
 
 <example>
   <file name="index.html">
+    <body ng-app="">
       <div ng-init="qty=1;cost=2">
         <b>Invoice:</b>
         <div>
@@ -46,6 +47,7 @@ Let's start with input fields for quantity and cost whose values are multiplied 
           <b>Total:</b> {{qty * cost | currency}}
         </div>
       </div>
+    </body>
   </file>
 </example>
 
@@ -128,6 +130,7 @@ different currencies and also pay the invoice.
       });
   </file>
   <file name="index.html">
+    <body ng-app="invoice2">
       <div ng-controller="InvoiceController as invoice">
         <b>Invoice:</b>
         <div>
@@ -147,6 +150,7 @@ different currencies and also pay the invoice.
           <button class="btn" ng-click="invoice.pay()">Pay</button>
         </div>
       </div>
+    </body>
   </file>
 </example>
 
@@ -356,6 +360,7 @@ The following example shows how this is done with Angular:
       }]);
   </file>
   <file name="index.html">
+    <body ng-app="invoice3">
       <div ng-controller="InvoiceController as invoice">
         <b>Invoice:</b>
         <div>
@@ -375,6 +380,7 @@ The following example shows how this is done with Angular:
           <button class="btn" ng-click="invoice.pay()">Pay</button>
         </div>
       </div>
+    </body>
   </file>
 </example>
 
