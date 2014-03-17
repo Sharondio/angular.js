@@ -134,11 +134,13 @@ string "very". Depending on which button is clicked, the `spice` model is set to
 
 <example module="spicyApp1">
   <file name="index.html">
-    <div ng-controller="SpicyCtrl">
-     <button ng-click="chiliSpicy()">Chili</button>
-     <button ng-click="jalapenoSpicy()">Jalapeño</button>
-     <p>The food is {{spice}} spicy!</p>
-    </div>
+    <body ng-app="spicyApp1">
+      <div ng-controller="SpicyCtrl">
+       <button ng-click="chiliSpicy()">Chili</button>
+       <button ng-click="jalapenoSpicy()">Jalapeño</button>
+       <p>The food is {{spice}} spicy!</p>
+      </div>
+    </body>
   </file>
   <file name="app.js">
     var myApp = angular.module('spicyApp1', []);
@@ -175,12 +177,14 @@ previous example.
 
 <example module="spicyApp2">
   <file name="index.html">
-  <div ng-controller="SpicyCtrl">
-   <input ng-model="customSpice">
-   <button ng-click="spicy('chili')">Chili</button>
-   <button ng-click="spicy(customSpice)">Custom spice</button>
-   <p>The food is {{spice}} spicy!</p>
-  </div>
+  <body ng-app="spicyApp2">
+    <div ng-controller="SpicyCtrl">
+      <input ng-model="customSpice">
+      <button ng-click="spicy('chili')">Chili</button>
+      <button ng-click="spicy(customSpice)">Custom spice</button>
+      <p>The food is {{spice}} spicy!</p>
+    </div>
+  </body>
   </file>
   <file name="app.js">
     var myApp = angular.module('spicyApp2', []);
@@ -212,6 +216,7 @@ more information about scope inheritance.
 
 <example module="scopeInheritance">
   <file name="index.html">
+  <body ng-app="scopeInheritence">
     <div class="spicy">
       <div ng-controller="MainCtrl">
         <p>Good {{timeOfDay}}, {{name}}!</p>
@@ -225,6 +230,7 @@ more information about scope inheritance.
         </div>
       </div>
     </div>
+  </body>
   </file>
   <file name="app.css">
     div.spicy div {
